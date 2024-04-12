@@ -17,19 +17,26 @@ public class LessonController {
     private final LessonService lessonService;
 
     @PostMapping
-    public boolean addLesson(LessonPayload lessonPayload) {
+    public boolean addLesson(@RequestBody LessonPayload lessonPayload) {
         log.info("addLesson: {}", lessonPayload);
         return lessonService.addLesson(lessonPayload);
     }
-    
+
     @GetMapping
     public List<Lesson> getLessonByCategory(@RequestParam("author") String authorName,
                                             @RequestParam("categoryType") String categoryType) {
+        System.out.println(authorName + " " + categoryType);
         return lessonService.getLessonsByCategory(authorName, categoryType);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{lessonId}")
     public boolean deleteLesson(@PathVariable Integer lessonId) {
         return lessonService.deleteLesson(lessonId);
     }
+
+    @PutMapping("/{lessonId}")
+    public boolean updateLesson(@PathVariable Integer lessonId, @RequestBody LessonPayload lessonPayload) {
+        return lessonService.updateLesson(lessonId, lessonPayload);
+    }
+
 }
