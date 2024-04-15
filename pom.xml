@@ -11,6 +11,7 @@
 
   <modules>
     <module>Lessons</module>
+      <module>Admin</module>
   </modules>
 
   <name>my-app</name>
