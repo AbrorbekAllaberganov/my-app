@@ -33,11 +33,11 @@ public class Lesson {
     private String description;
 
     @Column(nullable = false)
-    private Long videoId;
+    private String videoId;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private Category category;
+    private Author author;
 
     @CreationTimestamp
     Date createdAt;

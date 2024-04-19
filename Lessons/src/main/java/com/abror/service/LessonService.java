@@ -1,9 +1,8 @@
 package com.abror.service;
 
-import com.abror.entity.Category;
 import com.abror.entity.Lesson;
 import com.abror.payload.LessonPayload;
-import com.abror.repasitory.CategoryRepository;
+import com.abror.repasitory.AuthorRepository;
 import com.abror.repasitory.LessonRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +15,7 @@ import java.util.List;
 @Slf4j
 public class LessonService {
     private final LessonRepository lessonRepository;
-    private final CategoryRepository categoryRepository;
+    private final AuthorRepository authorRepository;
 
     public boolean addLesson(LessonPayload lessonPayload) {
         try {
@@ -24,7 +23,7 @@ public class LessonService {
                     .title(lessonPayload.getTitle())
                     .description(lessonPayload.getDescription())
                     .videoId(lessonPayload.getVideoId())
-                    .category(categoryRepository.getById(lessonPayload.getCategoryId()))
+                    .author(authorRepository.getById(lessonPayload.getAuthorId()))
                     .build();
             lessonRepository.save(lesson);
             return true;
@@ -57,7 +56,7 @@ public class LessonService {
                         .title(payload.getTitle())
                         .description(payload.getDescription())
                         .videoId(payload.getVideoId())
-                        .category(categoryRepository.getById(payload.getCategoryId()))
+                        .author(authorRepository.getById(payload.getAuthorId()))
                         .build();
                 lessonRepository.save(lesson);
                 return true;

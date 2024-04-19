@@ -6,13 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
 @Builder
-public class Category {
+public class Author {
     @Id
     @SequenceGenerator(
             name = "category_id_sequence",
@@ -25,9 +26,6 @@ public class Category {
     private Integer id;
 
     @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
     private String authorName;
 
     @Column(nullable = false)
@@ -36,5 +34,5 @@ public class Category {
     @Enumerated(EnumType.STRING)
     private CategoryType categoryType;
 
-    private Long authorPhotoId;
+    private String authorPhotoId;
 }

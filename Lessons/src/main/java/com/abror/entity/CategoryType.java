@@ -5,5 +5,6 @@ public enum CategoryType {
     LISTENING,
     SPEAKING,
     WRITING,
-    GRAMMAR
+    GRAMMAR,
+    MIX
 }

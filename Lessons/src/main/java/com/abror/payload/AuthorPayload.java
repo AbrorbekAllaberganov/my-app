@@ -4,13 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class CategoryPayload {
-    private String name;
+public class AuthorPayload {
     private String authorName;
     private String authorDescription;
-    private Long authorPhotoId;
-    private String categoryType;
+    private String authorPhotoId;
+    private String authorType;
 }

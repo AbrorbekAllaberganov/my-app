@@ -14,18 +14,18 @@ public class Controller {
     private final AdminService adminService;
 
     @PostMapping
-    public boolean addAdmin(@RequestBody AdminPayload adminPayload){
+    public boolean addAdmin(@RequestBody AdminPayload adminPayload) {
         return adminService.addAdmin(adminPayload);
     }
 
     @GetMapping("/{adminId}")
-    public String getAdminAction(@PathVariable Long adminId){
+    public String getAdminAction(@PathVariable Long adminId) {
         return adminService.getActionById(adminId);
     }
 
     @PutMapping
     public boolean updateAdmin(@RequestParam("adminId") Long adminId,
-                               @RequestParam("action") String action){
+                               @RequestParam("action") String action) {
         return adminService.updateAdmin(adminId, action);
     }
 

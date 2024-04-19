@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class LessonPayload {
     private String title;
     private String description;
-    private Long videoId;
-    private Integer categoryId;
+    private String videoId;
+    private Integer authorId;
 }
