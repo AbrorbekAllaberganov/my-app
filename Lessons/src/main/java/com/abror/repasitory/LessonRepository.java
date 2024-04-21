@@ -9,10 +9,7 @@ import java.util.List;
 
 @Repository
 public interface LessonRepository extends JpaRepository<Lesson,Integer> {
-    @Query(nativeQuery = true,value = "select * from lesson where category_id = ?")
-    List<Lesson> getLessonsByCategoryId(Integer categoryId);
 
-    @Query(nativeQuery = true,value = "SELECT l.* FROM lesson l JOIN category c ON l.category_id = c.id " +
-            "WHERE c.author_name = ?1 AND c.category_type = ?2")
-    List<Lesson> getLessonsByAuthorNameAndCategoryType(String authorName,String categoryType);
+    @Query(nativeQuery = true,value = "SELECT * FROM lesson  WHERE author_id=?1")
+    List<Lesson> getLessonsByAuthorId(int authorId);
 }

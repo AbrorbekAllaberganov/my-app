@@ -18,28 +18,32 @@ public class AuthorController {
 
     @PostMapping
     public boolean addAuthor(@RequestBody AuthorPayload authorPayload){
-        System.out.println(authorPayload);
-        return authorservice.addCategory(authorPayload);
+        return authorservice.addAuthor(authorPayload);
     }
 
-    @DeleteMapping("/{categoryId}")
-    public boolean deleteCategory(@PathVariable Integer categoryId){
-        return authorservice.deleteAuthor(categoryId);
+    @DeleteMapping("/{authorId}")
+    public boolean deleteAuthor(@PathVariable Integer authorId){
+        return authorservice.deleteAuthor(authorId);
     }
 
-    @GetMapping("/{categoryType}")
-    public List<String> getCategoryAuthorNames(@PathVariable String categoryType){
-        return authorservice.getAuthorNames(categoryType);
+    @GetMapping("/{authorType}")
+    public List<Author> getAuthorAuthorList(@PathVariable String authorType){
+        return authorservice.getAuthorListByType(authorType);
     }
 
-    @PutMapping("/{categoryId}")
-    public boolean updateCategory(@PathVariable Integer categoryId, @RequestBody AuthorPayload authorPayload){
-        return authorservice.updateAuthor(categoryId, authorPayload);
+    @PutMapping("/{authorId}")
+    public boolean updateAuthor(@PathVariable Integer authorId, @RequestBody AuthorPayload authorPayload){
+        return authorservice.updateAuthor(authorId, authorPayload);
     }
 
     @GetMapping
     public List<Author> getAuthorList(){
         return authorservice.getAuthorList();
+    }
+
+    @GetMapping("/get/{authorId}")
+    public Author getAuthorById(@PathVariable Integer authorId){
+        return authorservice.getAuthorById(authorId);
     }
 
 }

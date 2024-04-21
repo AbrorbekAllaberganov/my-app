@@ -16,13 +16,13 @@ import java.util.List;
 public class AuthorService {
     private final AuthorRepository authorRepository;
 
-    public boolean addCategory(AuthorPayload authorPayload) {
+    public boolean addAuthor(AuthorPayload authorPayload) {
         try {
             Author author = Author.builder()
                     .authorName(authorPayload.getAuthorName())
                     .authorDescription(authorPayload.getAuthorDescription())
                     .authorPhotoId(authorPayload.getAuthorPhotoId())
-                    .categoryType(getCategoryType(authorPayload.getAuthorType()))
+                    .authorType(getCategoryType(authorPayload.getAuthorType()))
                     .build();
             authorRepository.save(author);
             return true;
@@ -42,8 +42,8 @@ public class AuthorService {
         return false;
     }
 
-    public List<String> getAuthorNames(String categoryType) {
-        return authorRepository.getAuthorNames(categoryType);
+    public List<Author> getAuthorListByType(String authorType) {
+        return authorRepository.getAuthorsByType(authorType);
     }
 
 
@@ -55,7 +55,7 @@ public class AuthorService {
                         .authorName(authorPayload.getAuthorName())
                         .authorDescription(authorPayload.getAuthorDescription())
                         .authorPhotoId(authorPayload.getAuthorPhotoId())
-                        .categoryType(getCategoryType(authorPayload.getAuthorType()))
+                        .authorType(getCategoryType(authorPayload.getAuthorType()))
                         .build();
                 authorRepository.save(author);
                 return true;
@@ -66,6 +66,10 @@ public class AuthorService {
             log.error("Exception is in the method of update author - {}" + e.getMessage());
         }
         return false;
+    }
+
+    public Author getAuthorById(Integer authorId) {
+        return authorRepository.findById(authorId).orElse(null);
     }
 
 

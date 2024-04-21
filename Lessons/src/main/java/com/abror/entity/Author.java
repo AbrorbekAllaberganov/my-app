@@ -32,7 +32,7 @@ public class Author {
     private String authorDescription;
 
     @Enumerated(EnumType.STRING)
-    private CategoryType categoryType;
+    private CategoryType authorType;
 
     private String authorPhotoId;
 }

@@ -18,15 +18,12 @@ public class LessonController {
 
     @PostMapping
     public boolean addLesson(@RequestBody LessonPayload lessonPayload) {
-        log.info("addLesson: {}", lessonPayload);
         return lessonService.addLesson(lessonPayload);
     }
 
-    @GetMapping
-    public List<Lesson> getLessonByCategory(@RequestParam("author") String authorName,
-                                            @RequestParam("categoryType") String categoryType) {
-        System.out.println(authorName + " " + categoryType);
-        return lessonService.getLessonsByCategory(authorName, categoryType);
+    @GetMapping("/{authorId}")
+    public List<Lesson> getLessonByAuthor(@PathVariable Integer authorId) {
+        return lessonService.getLessonsByCategory(authorId);
     }
 
     @DeleteMapping("/{lessonId}")

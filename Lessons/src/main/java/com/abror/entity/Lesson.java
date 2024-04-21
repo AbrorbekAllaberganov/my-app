@@ -36,7 +36,7 @@ public class Lesson {
     private String videoId;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "author_id")
     private Author author;
 
     @CreationTimestamp

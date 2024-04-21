@@ -33,9 +33,9 @@ public class LessonService {
         return false;
     }
 
-    public List<Lesson> getLessonsByCategory(String authorName, String categoryType) {
+    public List<Lesson> getLessonsByCategory(int authorId) {
 //        Category category =categoryRepository.getCategoryByTypeAndAuthorName(authorName, categoryType);
-        return lessonRepository.getLessonsByAuthorNameAndCategoryType(authorName,categoryType);
+        return lessonRepository.getLessonsByAuthorId(authorId);
     }
 
     public boolean deleteLesson(Integer lessonId) {
