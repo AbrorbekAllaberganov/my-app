@@ -1,0 +1,101 @@
+2024-04-26 10:33:54.050  INFO 29384 --- [main] c.a.BookApplication                      : Starting BookApplication using Java 17.0.8 on LAPTOP-4R0FO0LG with PID 29384 (C:\Users\Legion\my-app\Book\target\classes started by Legion in C:\Users\Legion\my-app)
+2024-04-26 10:33:54.081  INFO 29384 --- [main] c.a.BookApplication                      : No active profile set, falling back to default profiles: default
+2024-04-26 10:33:55.383  INFO 29384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-26 10:33:55.513  INFO 29384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interfaces.
+2024-04-26 10:33:56.824  INFO 29384 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8082 (http)
+2024-04-26 10:33:56.852  INFO 29384 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-04-26 10:33:56.853  INFO 29384 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-04-26 10:33:57.073  INFO 29384 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-04-26 10:33:57.073  INFO 29384 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2907 ms
+2024-04-26 10:33:57.433  INFO 29384 --- [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-26 10:33:57.583  INFO 29384 --- [main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-04-26 10:33:57.916  INFO 29384 --- [main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-26 10:33:58.158  INFO 29384 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-04-26 10:33:58.555  INFO 29384 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-04-26 10:33:58.588  INFO 29384 --- [main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-04-26 10:33:59.748  INFO 29384 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-26 10:33:59.762  INFO 29384 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-26 10:34:00.337  WARN 29384 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-26 10:34:01.165  INFO 29384 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-26 10:34:01.183  INFO 29384 --- [main] c.a.BookApplication                      : Started BookApplication in 8.107 seconds (JVM running for 9.701)
+2024-04-26 10:34:24.927  INFO 29384 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-26 10:34:24.932  INFO 29384 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-04-26 10:34:24.940  INFO 29384 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-04-26 10:50:48.380 ERROR 16052 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.root' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.root
+    Value: ERROR, INFO
+    Origin: class path resource [application.yml] - 26:11
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.ERROR, INFO)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2024-04-26 10:52:54.081  INFO 18328 --- [main] c.a.BookApplication                      : Starting BookApplication using Java 17.0.8 on LAPTOP-4R0FO0LG with PID 18328 (C:\Users\Legion\my-app\Book\target\classes started by Legion in C:\Users\Legion\my-app)
+2024-04-26 10:52:54.109  INFO 18328 --- [main] c.a.BookApplication                      : No active profile set, falling back to default profiles: default
+2024-04-26 10:52:55.333  INFO 18328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-26 10:52:55.430  INFO 18328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interfaces.
+2024-04-26 10:52:56.425  INFO 18328 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8082 (http)
+2024-04-26 10:52:56.444  INFO 18328 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-04-26 10:52:56.445  INFO 18328 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-04-26 10:52:56.610  INFO 18328 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-04-26 10:52:56.611  INFO 18328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2411 ms
+2024-04-26 10:52:56.891  INFO 18328 --- [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-26 10:52:56.985  INFO 18328 --- [main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-04-26 10:52:57.214  INFO 18328 --- [main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-26 10:52:57.391  INFO 18328 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-04-26 10:52:57.679  INFO 18328 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-04-26 10:52:57.705  INFO 18328 --- [main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-04-26 10:52:58.825  INFO 18328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-26 10:52:58.840  INFO 18328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-26 10:52:59.546  WARN 18328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-26 10:53:00.552  INFO 18328 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-26 10:53:00.571  INFO 18328 --- [main] c.a.BookApplication                      : Started BookApplication in 7.397 seconds (JVM running for 8.735)
+2024-04-26 10:53:15.285  INFO 18328 --- [http-nio-8082-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-26 10:53:15.286  INFO 18328 --- [http-nio-8082-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2024-04-26 10:53:15.288  INFO 18328 --- [http-nio-8082-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2024-04-26 10:53:36.063  WARN 18328 --- [http-nio-8082-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'type' for method parameter type String is not present]
+2024-04-26 10:53:58.841  WARN 18328 --- [http-nio-8082-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2024-04-26 11:02:41.517  INFO 28508 --- [main] com.abror.LessonApplication              : Starting LessonApplication using Java 17.0.8 on LAPTOP-4R0FO0LG with PID 28508 (C:\Users\Legion\my-app\Lessons\target\classes started by Legion in C:\Users\Legion\my-app)
+2024-04-26 11:02:41.523  INFO 28508 --- [main] com.abror.LessonApplication              : No active profile set, falling back to default profiles: default
+2024-04-26 11:02:42.748  INFO 28508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-26 11:02:42.874  INFO 28508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
+2024-04-26 11:02:44.097  INFO 28508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-26 11:02:44.122  INFO 28508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-26 11:02:44.123  INFO 28508 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-04-26 11:02:44.359  INFO 28508 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-26 11:02:44.360  INFO 28508 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2739 ms
+2024-04-26 11:02:44.761  INFO 28508 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-26 11:02:44.881  INFO 28508 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-04-26 11:02:45.131  INFO 28508 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-26 11:02:45.327  INFO 28508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-26 11:02:45.658  INFO 28508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-26 11:02:45.692  INFO 28508 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-04-26 11:02:46.964  INFO 28508 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-26 11:02:46.976  INFO 28508 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-26 11:02:47.709  WARN 28508 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-26 11:02:48.533  INFO 28508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-26 11:02:48.551  INFO 28508 --- [main] com.abror.LessonApplication              : Started LessonApplication in 7.903 seconds (JVM running for 8.669)
+2024-04-26 11:05:27.388  INFO 28508 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-26 11:05:27.391  INFO 28508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-26 11:05:27.398  INFO 28508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-26 11:06:23.991  INFO 18328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-26 11:06:23.994  INFO 18328 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-04-26 11:06:24.000  INFO 18328 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

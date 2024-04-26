@@ -33,7 +33,7 @@ public class Lesson {
     private String description;
 
     @Column(nullable = false)
-    private String videoId;
+    private String videoId; //
 
     @ManyToOne
     @JoinColumn(name = "author_id")

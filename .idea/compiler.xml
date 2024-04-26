@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Admin" />
         <module name="Lessons" />
+        <module name="Book" />
       </profile>
     </annotationProcessing>
   </component>

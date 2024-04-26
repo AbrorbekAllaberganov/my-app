@@ -1,12 +1,12 @@
 server:
-  port: 8080
+  port: 8082
 
 spring:
   application:
-    name: Lesson
+    name: Book
   datasource:
     password: 1234
-    url: jdbc:postgresql://localhost:5432/lessons
+    url: jdbc:postgresql://localhost:5432/book_db
     username: postgres
   jpa:
     properties:
@@ -16,3 +16,16 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: 'false'
+
+
+logging:
+  file:
+    name: logs/application.log
+    path: logs
+  level:
+    com:
+      sivalabs: DEBUG
+    org:
+      springframework: INFO
+      hibernate:
+        validator: DEBUG
